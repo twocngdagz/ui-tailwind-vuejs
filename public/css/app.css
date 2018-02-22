@@ -4511,6 +4511,9 @@ button,
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+.select input:focus {
+  outline: none;
+}
 
 @media (min-width: 576px) {
   .sm\:list-reset {
@@ -20295,3 +20298,5 @@ button,
     z-index: auto;
   }
 }
+
+/*# sourceMappingURL=app.css.map*/

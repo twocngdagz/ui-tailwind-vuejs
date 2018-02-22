@@ -12,9 +12,18 @@ let tailwindcss = require('tailwindcss');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js').sourceMaps()
+if (!mix.inProduction()) {
+    mix.webpackConfig({
+        devtool: 'source-map'
+    })
+    .sourceMaps()
+}
+mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/index.sass', 'public/css/app.css')
    .options({
         processCssUrls: false,
         postCss: [ tailwindcss('./tailwind.js') ],
     });
+mix.browserSync({
+    proxy: 'http://ui-tailwind-vuejs.test/#/'
+})

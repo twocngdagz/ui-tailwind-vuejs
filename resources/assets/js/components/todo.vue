@@ -4,7 +4,7 @@
             <h1 class="text-grey-darkest">Todo List</h1>
             <div class="flex mt-4">
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker" v-model="newTodo" placeholder="Add Todo">
-                <button class="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal" @click="add" :disabled="newTodo.length === 0">Add</button>
+                <button class="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal" @click="add" :disabled="newTodo.length === 0" v-toggle.test>Add</button>
             </div>
         </div>
         <div>
@@ -21,7 +21,11 @@
 </template>
 
 <script>
+    import collapse from './collapse'
     export default{
+        components: {
+            collapse
+        },
         data(){
             return{
                 todos: [],
