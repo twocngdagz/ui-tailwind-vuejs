@@ -19,6 +19,10 @@ let routes = [
         props: {
             options: ["option 4","option 5","option 6"]
         }
+    },
+    {
+        path: '/iview',
+        component: require('./components/iview.vue')
     }
 ];
 

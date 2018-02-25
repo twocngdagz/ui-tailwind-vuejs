@@ -25,5 +25,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
         postCss: [ tailwindcss('./tailwind.js') ],
     });
 mix.browserSync({
-    proxy: 'http://ui-tailwind-vuejs.test/#/'
+    proxy: 'http://ui-tailwind-vuejs.test/#/iview'
 })

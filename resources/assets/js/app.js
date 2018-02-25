@@ -10,6 +10,9 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router'
 import App from './components/App'
 import router from './routes'
+import iView from 'iview';
+import locale from 'iview/dist/locale/en-US';
+import 'iview/dist/styles/iview.css';
 
 
 const all_listen_types = {hover: true, click: true, focus: true};
@@ -59,6 +62,7 @@ Vue.directive('toggle', {
  */
 
 Vue.use(VueRouter)
+Vue.use(iView, { locale });
 
 new Vue({
   el: '#app',
